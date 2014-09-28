@@ -1,0 +1,22 @@
+source .bash_aliases
+source /opt/boxen/env.sh
+
+export LSCOLORS=ExFxBxDxCxegedabagacad
+export PS1="\[\e[1m\]________________________________________________________________________________\n\[\033[36m\]\u@\h:\[\033[37;1m\]\w\[\033[m\]\$ "
+
+# Fixes ctrl+left/right
+bind '"\e[5C": forward-word'
+bind '"\e[5D": backward-word'
+bind '"\e[1;5C": forward-word'
+bind '"\e[1;5D": backward-word'
+
+settitle () {
+	echo -n -e "\033]0;$PWD\007"
+}
+
+# Change the terminal title everytime you chagne directory
+cd () {
+  builtin cd "$@"
+  settitle
+}
+
