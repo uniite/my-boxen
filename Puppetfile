@@ -59,16 +59,16 @@ github "xquartz",     "1.2.1"
 
 # Optional/custom modules. There are tons available at
 # https://github.com/boxen.
-# Optional/custom modules. There are tons available at
-# https://github.com/boxen
 github "android",          "1.3.0"
 github "bash",             "1.1.0"
 github "chrome",           "1.2.0"
 github "crashplan",        "1.0.1"
 github "imagemagick",      "1.3.0"
 github "java",             "1.7.0"
-github "mysql",            "1.99.18"
+github "mysql",            "2.0.0", :repo => 'uniite/puppet-mysql'
 github "osx",              "2.7.1"
 github "pycharm",          "1.0.4"
+github "python",           "2.0.0"
+github "redis",            "3.1.0"
 github "rubymine",         "1.1.0"
 github "sublime_text_2",   "1.1.2"

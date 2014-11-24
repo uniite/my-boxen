@@ -2,6 +2,9 @@ class people::uniite {
   
   $home = "/Users/${::boxen_user}"
 
+  # Projects
+  include projects::noshare
+
   
   ## Includes
   # Android development
@@ -19,6 +22,10 @@ class people::uniite {
   include pycharm
   include rubymine
   include sublime_text_2
+  # Database Server
+  include mysql
+  # Python 2.7
+  include python
   # X Server
   include xquartz
 
@@ -31,8 +38,8 @@ class people::uniite {
   include osx::dock::autohide
   include osx::dock::position
   # Easy way to lock the computer
-  osx::dock::hot_corner { 'Top Right':
-    action => 'Start Screen Saver'
+  osx::dock::hot_corner { "Top Right":
+    action => "Start Screen Saver",
   }
   include osx::finder::unhide_library
   include osx::finder
@@ -41,15 +48,15 @@ class people::uniite {
 
   # .bash_profile
   file { "${home}/.bash_profile":
-    source => 'puppet:///modules/people/uniite/bash_profile',
+    source => "puppet:///modules/people/uniite/bash_profile",
   }
 
   # Passwordless sudo
-  sudoers { 'jon_sudo':
+  sudoers { "jon_sudo":
     users    => $::boxen_user,
-    type     => 'user_spec',
-    commands => '(ALL) NOPASSWD: ALL',
-    hosts    => 'ALL',
-    comment  => 'Do not ask for password for jon',
+    type     => "user_spec",
+    commands => "(ALL) NOPASSWD: ALL",
+    hosts    => "ALL",
+    comment  => "Do not ask for password for jon",
   }
 }

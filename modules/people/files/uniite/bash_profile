@@ -1,6 +1,7 @@
 source .bash_aliases
 source /opt/boxen/env.sh
 
+export PATH=~/bin:$PATH
 export LSCOLORS=ExFxBxDxCxegedabagacad
 export PS1="\[\e[1m\]________________________________________________________________________________\n\[\033[36m\]\u@\h:\[\033[37;1m\]\w\[\033[m\]\$ "
 
