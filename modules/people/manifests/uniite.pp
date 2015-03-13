@@ -3,6 +3,7 @@ class people::uniite {
   $home = "/Users/${::boxen_user}"
 
   # Projects
+  include projects::dinheiro
   include projects::noshare
 
   

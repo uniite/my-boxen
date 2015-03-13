@@ -8,4 +8,7 @@ class projects::noshare {
     source        => "uniite/noshare";
   }
 
+  package { "ImageMagick": }
+  package { "webp": }
+
 }
