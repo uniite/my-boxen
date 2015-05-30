@@ -4,6 +4,7 @@ class people::uniite {
 
   # Projects
   include projects::dinheiro
+  include projects::loan_calc
   include projects::noshare
 
   
